@@ -1,0 +1,503 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 200;
+}
+
+body {
+    background-color: rgb(204, 204, 204);
+    color: black;
+}
+
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid black;
+    /* position: fixed;
+    top: 0; */
+}
+
+#header h1 {
+    color: red;
+    font-family:'Times New Roman', Times, serif;
+    font-weight: 600;
+}
+
+#nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#nav li {
+    list-style: none;
+    /* font-weight: 500; */
+    cursor: pointer;
+    border-radius: 0.2rem;
+}
+
+#nav li a {
+    text-decoration: none;
+    color: black;
+    transition: all 300ms linear;
+}
+
+#nav li a.active {
+    background-color: red;
+    color: black;
+}
+
+.pro_name {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 200;
+    background-color: red;
+}
+
+.brand_div {
+    display: grid;
+}
+
+.item_div {
+    background-color: white;
+    width: 100%;
+}
+
+.brand_img {
+    width: 100%;
+}
+
+.brand_name {
+    background-color: white;
+    color: red;
+}
+
+.brand_desc {
+    background-color: white;
+}
+
+.brand_price {
+    font-weight: 100;
+    font-family:'Times New Roman', Times, serif;
+    font-weight: 600;
+    background-color: white;
+}
+
+.pur_div {
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+}
+
+.pur_det {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+}
+
+.pur_num {
+    font-size: bold;
+    background-color: white;
+}
+
+.pur_btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+
+.cart_btn {
+    border: none;
+    background-color: red;
+    color: black;
+    cursor: pointer;
+    outline: none;
+}
+
+#footer {
+    background-color: rgb(65, 65, 65);
+    color: white;
+    padding: 0.5rem;
+    text-align: center;
+}
+
+#fotLinks1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    background-color: rgb(65, 65, 65);
+}
+
+#fotLinks2 {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    background-color: rgb(65, 65, 65);
+}
+
+.fotLink {
+    text-decoration: none;
+    color: white;
+    background-color: rgb(65, 65, 65);
+    border: none;
+    font-size: 0.75rem;
+    margin: 0.5rem;
+}
+
+#rigDiv {
+    border-top: 1px solid white;
+    color: rgba(255, 255, 255, 0.75);
+    background-color: rgb(65, 65, 65);
+    padding: 0.5rem 0;
+    margin-top: 0.25rem;
+}
+
+.itemSec {
+    background-color: white;
+    padding: 0.5rem;
+    margin-bottom: 0.25rem;
+}
+
+.itemDet {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.itemPic {
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+.itemName {
+    font-size: 1rem;
+}
+
+.itemPrice {
+    font-size: 0.85rem;
+}
+
+.itemParam {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin-top: 0.5rem;
+}
+
+.itemParamBtn {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.itemBtn {
+    background: none;
+    border: none;
+    font-size: 1.25rem;
+}
+
+.remItemBtn {
+    border: none;
+    background-color: red;
+    padding: 0.125rem 0.25rem 0.125rem 0.25rem;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+}
+
+#conOrderBtn {
+    border: none;
+    background-color: red;
+    width: 100%;
+    text-align: center;
+    font-size: 1rem;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+#displayPro {
+    width: 100%;
+    height: 5rem;
+    border: 1px solid black;
+    margin-bottom: 0.5rem;
+    object-position: center;
+}
+
+
+
+
+
+
+@media all and (max-width: 767px) {
+
+    #root {
+        padding: 0.5rem;
+    }
+
+    #header {
+        padding: 0.25rem 0 0.75rem 0;
+        margin-bottom: 1rem;
+    }
+
+    #header h1 {
+        font-size: 1.5rem;
+    }
+
+    #nav li {
+        font-size: 1rem;
+        margin: 0 0.25rem;
+    }
+
+    #nav li a {
+        padding: 0.125rem 0.25rem 0.125rem 0.25rem;
+    }
+
+    #nav li a.active {
+        letter-spacing: 1px;
+    }
+
+    #nav li a:hover {
+        letter-spacing: 1px;
+    }
+
+    #introText {
+        padding: 0  0 1rem 0;
+        border-bottom: 1px solid black;
+        margin-bottom: 1rem;
+    }
+
+    .pro_name {
+        font-size: 1.25rem;
+        /* border-radius: 0.5rem; */
+        margin-bottom: 0.25rem;
+        padding: 0.25rem;
+    }
+
+    .brand_div {
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 0.25rem;
+        margin-bottom: 0.25rem;
+    }
+
+    .item_div {
+        padding: 0.5rem;
+        /* border-radius: 0.5rem; */
+    }
+
+    .brand_img {
+        height: 8rem;
+        margin-top: 0.5rem;
+    }
+
+    .brand_name {
+        font-size: 1rem;
+        margin: 0.5rem 0 0.5rem 0;
+    }
+
+    .brand_desc {
+        font-size: 0.75rem;
+        margin: 0.5rem 0 0.5rem 0;
+    }
+
+    .brand_price {
+        margin: 0.5rem 0 0.5rem 0;
+        font-size: 0.8rem;
+    }
+
+    .pur_div {
+        margin: 0.5rem 0 0.5rem 0;
+        padding: 0.25rem 0.5rem;
+        border: 1px solid black;
+    }
+
+    .pur_num {
+        font-size: 1rem;
+        margin: 0 1rem;
+    }
+
+    .pur_btn {
+        font-size: 1rem;
+    }
+
+    .cart_btn {
+        font-size: 1rem;
+        padding: 0.25rem 0.5rem;
+        /* border-radius: 0.25rem; */
+    }
+}
+
+
+
+
+
+
+
+@media all and (min-width: 768px) and (max-width: 1023px) {
+    #root {
+        padding: 1rem;
+    }
+
+    #header {
+        padding: 0.5rem 0 1.5rem 0;
+    }
+
+    #header h1 {
+        font-size: 2rem;
+    }
+
+    #nav li {
+        padding: 0.25rem 0.5rem 0.25rem 0.5rem;
+        font-size: 1.5rem;
+        margin: 0 0.5rem;
+    }
+
+    #nav li:hover {
+        letter-spacing: 1px;
+    }
+
+    .pro_name {
+        font-size: 2rem;
+        border-radius: 1rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .brand_div {
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 0.75rem;
+        margin-bottom: 1rem;
+    }
+
+    .item_div {
+        padding: 1rem;
+        border-radius: 1rem;
+    }
+
+    .brand_img {
+        height: 12rem;
+        margin-top: 0.75rem;
+    }
+
+    .brand_name {
+        font-size: 1.5rem;
+        margin: 0.75rem 0 0.75rem 0;
+    }
+
+    .brand_desc {
+        font-size: 1.2rem;
+        margin: 0.75rem 0 0.75rem 0;
+    }
+
+    .brand_price {
+        margin: 0.5rem 0 0.5rem 0;
+        font-size: 1.2rem;
+    }
+
+    .pur_div {
+        margin: 0.75rem 0 0.75rem 0;
+        padding: 0.25rem 0.5rem;
+        border: 2px solid black;
+    }
+
+    .pur_num {
+        font-size: 1.5rem;
+        margin: 0 1.5rem;
+    }
+
+    .pur_btn {
+        font-size: 1.5rem;
+    }
+
+    .cart_btn {
+        font-size: 1.2rem;
+        padding: 0.75rem 0.75rem;
+        border-radius: 0.5rem;
+    }
+}
+
+
+
+
+
+
+
+@media all and (min-width: 1024px) {
+    #root {
+        padding: 1rem;
+    }
+
+    #header {
+        padding: 0.25rem 0 0.75rem 0;
+    }
+
+    #header h1 {
+        font-size: 1.5rem;
+    }
+
+    #nav li {
+        padding: 0.25rem 0.5rem 0.25rem 0.5rem;
+        font-size: 1rem;
+        margin: 0 0.5rem;
+    }
+
+    #nav li:hover {
+        letter-spacing: 1.5px;
+    }
+
+    .pro_name {
+        font-size: 1.5rem;
+        border-radius: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .brand_div {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-gap: 0.25rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .item_div {
+        padding: 1rem;
+        border-radius: 0.5rem;
+    }
+
+    .brand_img {
+        height: 10rem;
+        margin-top: 0.25rem;
+    }
+
+    .brand_name {
+        font-size: 1rem;
+        margin: 0.25rem 0 0.25rem 0;
+    }
+
+    .brand_desc {
+        font-size: 0.75rem;
+        margin: 0.25rem 0 0.25rem 0;
+    }
+
+    .brand_price {
+        margin: 0.25rem 0 0.25rem 0;
+        font-size: 1rem;
+    }
+
+    .pur_div {
+        margin: 0.25rem 0 0.25rem 0;
+        padding: 0.25rem 0.5rem;
+        border: 1px solid black;
+    }
+
+    .pur_num {
+        font-size: 1rem;
+        margin: 0 1.5rem;
+    }
+
+    .pur_btn {
+        font-size: 1.2rem;
+    }
+
+    .cart_btn {
+        font-size: 1rem;
+        padding: 0.5rem 0.5rem;
+        border-radius: 0.25rem;
+    }
+}
