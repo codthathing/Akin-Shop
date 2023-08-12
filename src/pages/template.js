@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import  { shoeItem } from "./shoe/shoeObj";
-import { arrayItem } from './arrayOrder'
 
-
+// localStorage.clear()
 const Template = ({id, image, brand, desc, price, purchase}) => {
 
+    const [arrayItem, setArray] = useState([])
     const [item, setItem] = useState(0)
+
     const addItem = () => {
         setItem(item + 1)
     }
@@ -15,13 +15,20 @@ const Template = ({id, image, brand, desc, price, purchase}) => {
         }
     }
 
-    const addToCart = (id) => {
-        shoeItem.filter((item) => item.id === id).map((details)=> {
-            const {id, image, brand, desc, price, purchase} = details
-            arrayItem.push({...details})
-            console.log(arrayItem)
+    const addToCart = () => {
+        if(item > 0) {
+            let itemDetail = {
+                id: arrayItem.length,
+                image: image,
+                brand: brand,
+                desc: desc,
+                price: price,
+                item: item
+            }
+            arrayItem.push(itemDetail)
             localStorage.setItem("itemsOrder", JSON.stringify(arrayItem))
-        })
+            setItem(0)
+        }
     }
     
     
@@ -35,10 +42,10 @@ const Template = ({id, image, brand, desc, price, purchase}) => {
             <div className="pur_div">
                 <div className="pur_det">
                     <button onClick={subItem} className="pur_btn">-</button>
-                    <p className="pur_num">{purchase}</p>
+                    <p className="pur_num">{item}</p>
                     <button onClick={addItem} className="pur_btn">+</button>
                 </div>
-                <button onClick={() => addToCart(id)} className="cart_btn">Add</button>
+                <button onClick={addToCart} className="cart_btn">Add</button>
             </div>
         </div>
     );

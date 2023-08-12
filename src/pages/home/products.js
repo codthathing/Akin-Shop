@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Template from "../template";
 import { shoeItem } from "../shoe/shoeObj";
 import { foodItem } from "../food/foodObj";
@@ -10,18 +10,20 @@ import shopify from "../images/shopify.png"
 
 const Products = () => {
 
-    let i = 0
-    const images = [laptop, liveseg, shopify]
-    const imgChange = () => {
-        document.getElementById('displayPro').src = images[i]
-        if(i < images.length - 1) {
-            i++;
-        } else {
-            i = 0
-        }
-        setTimeout("imgChange()", 500)
-    }
-    window.onload = imgChange
+    // let i = 0
+    // const images = [liveseg, laptop, shopify]
+    // const imgChange = () => {
+    //     document.getElementById('displayPro').src = images[0]
+    //     if(i < images.length - 1) {
+    //         i++;
+    //     } else {
+    //         i = 0
+    //     }
+    //     setTimeout("imgChange()", 2500)
+    // }
+    // useEffect(()=> {
+    //     imgChange()
+    // }, [])
 
     return (
         <>
@@ -31,7 +33,7 @@ const Products = () => {
                 similique nobis, odio aperiam labore facere 
                 reprehenderit!
             </article>
-            <img id="displayPro" name="disPro"/>
+            <img id="displayPro" src={liveseg} name="disPro"/>
             <div>
                 <h3 className="pro_name">Shoes</h3>
                 <div className="brand_div">

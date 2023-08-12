@@ -6,15 +6,15 @@ export const shoeItem = [
         brand: 'Balenciaga',
         desc: 'A very affordable shoe',
         price: 2000.00,
-        purchase: 2
+        purchase: 0
     },
     { 
-         id: 2,
+        id: 2,
         image: flower,
         brand: 'Boot',
         desc: 'A very affordable shoe',
         price: 3000.00,
-        purchase:1
+        purchase: 0
     },
     {
         id: 3,
@@ -22,7 +22,7 @@ export const shoeItem = [
         brand: 'Nike',
         desc: 'A very affordable shoe',
         price: 1000.00,
-        purchase:5
+        item: 0
     },
     {
         id: 4,
@@ -30,7 +30,7 @@ export const shoeItem = [
         brand: 'Prada',
         desc: 'A very affordable shoe',
         price: 5000.00,
-        purchase:1
+        item: 0
     },
     {
     id: 5,
@@ -38,7 +38,7 @@ export const shoeItem = [
         brand: 'Prada',
         desc: 'A very affordable shoe',
         price: 5000.00,
-        purchase:2
+        item: 0
     },
     {
     id: 6,
@@ -46,6 +46,6 @@ export const shoeItem = [
         brand: 'Prada',
         desc: 'A very affordable shoe',
         price: 5000.00,
-        purchase:3
+        item: 0
     }
 ]
