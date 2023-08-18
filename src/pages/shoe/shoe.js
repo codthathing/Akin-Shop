@@ -6,11 +6,10 @@ const Shoe = () => {
     return (
         <div className="brand_div">
             {shoeItem.map((details)=> {
-                const {id, image, brand, desc, price} = details
+                const {id, image, brand, desc, price} = details;
                 return <Template key={id} {...details}></Template>
-            })}
+            })};
         </div>
     );
-}
-
+};
 export default Shoe;

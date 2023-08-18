@@ -1,19 +1,19 @@
 import React, { useState } from "react";
 
-// localStorage.clear()
+let itemsOrdered = JSON.parse(localStorage.getItem("itemsOrder") || '[]');
 const Template = ({id, image, brand, desc, price, purchase}) => {
 
-    const [arrayItem, setArray] = useState([])
-    const [item, setItem] = useState(0)
+    const [arrayItem, setArray] = useState(itemsOrdered);
+    const [item, setItem] = useState(1);
 
     const addItem = () => {
-        setItem(item + 1)
-    }
+        setItem(item + 1);
+    };
     const subItem = () => {
-        if(item >0) {
-            setItem(item - 1)
-        }
-    }
+        if(item >1) {
+            setItem(item - 1);
+        };
+    };
 
     const addToCart = () => {
         if(item > 0) {
@@ -24,12 +24,12 @@ const Template = ({id, image, brand, desc, price, purchase}) => {
                 desc: desc,
                 price: price,
                 item: item
-            }
-            arrayItem.push(itemDetail)
-            localStorage.setItem("itemsOrder", JSON.stringify(arrayItem))
-            setItem(0)
-        }
-    }
+            };
+            arrayItem.push(itemDetail);
+            localStorage.setItem("itemsOrder", JSON.stringify(arrayItem));
+            setItem(1);
+        };
+    };
     
     
 
@@ -49,6 +49,6 @@ const Template = ({id, image, brand, desc, price, purchase}) => {
             </div>
         </div>
     );
-}
+};
 
 export default Template;

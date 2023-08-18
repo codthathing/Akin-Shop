@@ -1,33 +1,37 @@
 import React, { useContext } from "react";
 import { ItemOrderContext } from "./usecontext";
 
-let itemsOrdered = JSON.parse(localStorage.getItem("itemsOrder") || '[]')
+let itemsOrdered = JSON.parse(localStorage.getItem("itemsOrder") || '[]');
 export default function CartItems({id, image, brand, price, item}) {
 
-    const { setItems } = useContext(ItemOrderContext)
+    const { setItems } = useContext(ItemOrderContext);
 
     const addItem = (id) => {
-        let addOrderItem = Object.assign([], itemsOrdered)
-        addOrderItem = itemsOrdered.concat()
-        addOrderItem.filter((x) => x.id == id).map((detail) => detail.item += 1)
-        localStorage.setItem("itemsOrder", JSON.stringify(addOrderItem))
-        setItems(addOrderItem)
-    }
+        let addOrderItem = Object.assign([], itemsOrdered);
+        addOrderItem = itemsOrdered.concat();
+        addOrderItem.filter((x) => x.id == id).map((detail) => detail.item += 1);
+        localStorage.setItem("itemsOrder", JSON.stringify(addOrderItem));
+        setItems(addOrderItem);
+        window.location.reload();
+    };
     const subItem = (id) => {
-        if(item >0) {
-            let subOrderItem = Object.assign([], itemsOrdered)
-            subOrderItem = itemsOrdered.concat()
-            subOrderItem.filter((x) => x.id == id).map((detail) => detail.item -= 1)
-            localStorage.setItem("itemsOrder", JSON.stringify(subOrderItem))
-            setItems(subOrderItem)
-        }
-    }
+        if(item > 1) {
+            let subOrderItem = Object.assign([], itemsOrdered);
+            subOrderItem = itemsOrdered.concat();
+            subOrderItem.filter((x) => x.id == id).map((detail) => detail.item -= 1);
+            localStorage.setItem("itemsOrder", JSON.stringify(subOrderItem));
+            setItems(subOrderItem);
+            window.location.reload();
+        };
+    };
 
     const remItem = (id) => {
-        let remainOrder = itemsOrdered.filter((x) => x.id !== id)
-        localStorage.setItem("itemsOrder", JSON.stringify(remainOrder))
-        setItems(remainOrder)
-    }
+        let remainOrder = itemsOrdered.filter((x) => x.id !== id);
+        localStorage.setItem("itemsOrder", JSON.stringify(remainOrder));
+        remainOrder = JSON.parse(localStorage.getItem("itemsOrder")); 
+        setItems(remainOrder);
+        window.location.reload();
+    };
 
 
     return (
@@ -52,4 +56,4 @@ export default function CartItems({id, image, brand, price, item}) {
             </div>
         </section>
     );
-}
+};

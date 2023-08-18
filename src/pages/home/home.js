@@ -14,7 +14,7 @@ const Home = () => {
         return (
             <h1>This page is not available</h1>
         );
-    }
+    };
 
     return (
         <>
@@ -33,7 +33,6 @@ const Home = () => {
             </BrowserRouter>   
         </>
     );
-}
-
+};
 
 export default Home;

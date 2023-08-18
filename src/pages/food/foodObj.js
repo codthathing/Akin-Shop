@@ -1,4 +1,4 @@
-import flower from '../shoe/shoe_img/flower.jpg'
+import flower from '../shoe/shoe_img/flower.jpg';
 export const foodItem = [
     {
         id: 1,
@@ -6,7 +6,7 @@ export const foodItem = [
         brand: 'Spaghetti',
         desc: 'A delicious meal and nice',
         price: 2000.00,
-        item: 0
+        item: 1
     },
     {
         id: 2,
@@ -14,7 +14,7 @@ export const foodItem = [
         brand: 'Fried rice',
         desc: 'A delicious meal and nice',
         price: 3000.00,
-        item: 0
+        item: 1
     },
     {
         id: 3,
@@ -22,7 +22,7 @@ export const foodItem = [
         brand: 'Jollof rice',
         desc: 'A delicious meal and nice',
         price: 1000.00,
-        item: 0
+        item: 1
     },
     {
         id: 4,
@@ -30,7 +30,7 @@ export const foodItem = [
         brand: 'Beans & Rice',
         desc: 'A delicious meal and nice',
         price: 5000.00,
-        item: 0
+        item: 1
     },
     {
         id: 5,
@@ -38,7 +38,7 @@ export const foodItem = [
         brand: 'Beans & Rice',
         desc: 'A delicious meal and nice',
         price: 5000.00,
-        item: 0
+        item: 1
     }
     ,
     {
@@ -47,6 +47,6 @@ export const foodItem = [
         brand: 'Beans & Rice',
         desc: 'A delicious meal and nice',
         price: 5000.00,
-        item: 0
+        item: 1
     }
-]
+];

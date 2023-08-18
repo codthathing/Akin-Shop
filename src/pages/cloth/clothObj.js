@@ -1,4 +1,4 @@
-import flower from '../shoe/shoe_img/flower.jpg'
+import flower from '../shoe/shoe_img/flower.jpg';
 export const clothItem = [
     {
         id: 1,
@@ -6,7 +6,7 @@ export const clothItem = [
         brand: 'Check shirt',
         desc: 'A fitted for both genders',
         price: 2000.00,
-        item: 0
+        item: 1
     },
     {
         id: 2,
@@ -14,7 +14,7 @@ export const clothItem = [
         brand: 'Jean shorts',
         desc: 'A fitted for both genders',
         price: 3000.00,
-        item: 0
+        item: 1
     },
     {
         id: 3,
@@ -22,7 +22,7 @@ export const clothItem = [
         brand: 'Hoodie',
         desc: 'A fitted for both genders',
         price: 1000.00,
-        item: 0
+        item: 1
     },
     {
         id: 4,
@@ -30,7 +30,7 @@ export const clothItem = [
         brand: 'Canvas',
         desc: 'A fitted for both genders',
         price: 5000.00,
-        item: 0
+        item: 1
     },
     {
         id: 5,
@@ -38,7 +38,7 @@ export const clothItem = [
         brand: 'Canvas',
         desc: 'A fitted for both genders',
         price: 5000.00,
-        item: 0
+        item: 1
     },
     {
         id: 6,
@@ -46,6 +46,6 @@ export const clothItem = [
         brand: 'Canvas',
         desc: 'A fitted for both genders',
         price: 5000.00,
-        item: 0
+        item: 1
     }
-]
+];

@@ -20,7 +20,7 @@ export default function Layout() {
 }
 
 function ActiveLink({ href, children, ...props }) {
-    const path = window.location.pathname
+    const path = window.location.pathname;
 
     return (
         <li>
@@ -30,4 +30,4 @@ function ActiveLink({ href, children, ...props }) {
             </a>
         </li>
     );
-}
+};

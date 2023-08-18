@@ -10,5 +10,5 @@ const Input = () => {
   );
 }
 
-ReactDOM.render(<Input/>, document.getElementById("root"))
+ReactDOM.render(<Input/>, document.getElementById("root"));
 
