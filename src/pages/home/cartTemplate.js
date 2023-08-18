@@ -11,6 +11,7 @@ export default function CartItems({id, image, brand, price, item}) {
         addOrderItem = itemsOrdered.concat();
         addOrderItem.filter((x) => x.id == id).map((detail) => detail.item += 1);
         localStorage.setItem("itemsOrder", JSON.stringify(addOrderItem));
+        addOrderItem = JSON.parse(localStorage.getItem("itemsOrder"))
         setItems(addOrderItem);
         window.location.reload();
     };
@@ -20,6 +21,7 @@ export default function CartItems({id, image, brand, price, item}) {
             subOrderItem = itemsOrdered.concat();
             subOrderItem.filter((x) => x.id == id).map((detail) => detail.item -= 1);
             localStorage.setItem("itemsOrder", JSON.stringify(subOrderItem));
+            subOrderItem = JSON.parse(localStorage.getItem("itemsOrder"))
             setItems(subOrderItem);
             window.location.reload();
         };
