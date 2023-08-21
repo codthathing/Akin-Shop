@@ -8,7 +8,7 @@ const Cloth = () => {
             {clothItem.map((details)=> {
                 const {id, image, brand, desc, price} = details;
                 return <Template key={id} {...details}></Template>
-            })};
+            })}
         </div>
     );
 };

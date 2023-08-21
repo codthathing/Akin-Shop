@@ -3,7 +3,7 @@ import { Outlet } from "react-router-dom";
 export default function Layout() {
     return <>
         <header id="header">
-            <h1>Logo</h1>
+            <h1>Akinia</h1>
             <nav>
                 <ul id="nav">
                     <ActiveLink href="/">Home</ActiveLink>
@@ -11,7 +11,7 @@ export default function Layout() {
                     <ActiveLink href="/food">Food</ActiveLink>
                     <ActiveLink href="/shoe">Shoe</ActiveLink>
                     <ActiveLink href="/cart">Cart</ActiveLink>
-                </ul>
+                </ul> 
             </nav>
         </header>
         <Outlet/>

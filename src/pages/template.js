@@ -11,7 +11,7 @@ const Template = ({id, image, brand, desc, price, purchase}) => {
     };
     const subItem = () => {
         if(item >1) {
-            setItem(item - 1);
+            setItem(item - 1); 
         };
     };
 

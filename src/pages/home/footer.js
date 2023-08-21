@@ -20,7 +20,7 @@ const Footer = () => {
             </div>
             <div id="rigDiv">
                 All Rights Reserved
-            </div>
+            </div> 
         </footer>
     );
 };

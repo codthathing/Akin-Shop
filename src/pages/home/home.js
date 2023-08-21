@@ -1,37 +1,69 @@
 import React from "react";
-import{ BrowserRouter, Routes, Route} from 'react-router-dom';
-import Products from "./products";
-import Food from "../food/food";
-import Shoe from "../shoe/shoe";
-import Cloth from "../cloth/cloth";
-import Layout from "../layout";
-import Cart from "./cart";
+import Template from "../template";
+import { shoeItem } from "../shoe/shoeObj";
+import { foodItem } from "../food/foodObj";
+import { clothItem } from "../cloth/clothObj";
+import Footer from "./footer";
+import laptop from "../images/laptop_main.jpg";
+import liveseg from "../images/livesegball.png";
+import shopify from "../images/shopify.png";
 
+let i = 0;
+const images = [laptop, liveseg, shopify];
+function imgChange() {
+    document.getElementById('displayPro').src = images[i];
+    if(i < images.length - 1) {
+        i++;
+    } else {
+        i = 0;
+    };
+    setTimeout("imgChange()", 500);
+};
+window.onload = imgChange
 
 const Home = () => {
 
-    const Error = () => {
-        return (
-            <h1>This page is not available</h1>
-        );
-    };
-
     return (
         <>
-            <Layout/>
-            <BrowserRouter>
-                <Routes>
-                    <Route path="/">
-                        <Route index element={<Products/>}/>
-                        <Route path="food" element={<Food/>}/>
-                        <Route path="shoe" element={<Shoe/>}/>
-                        <Route path="cloth" element={<Cloth/>}/>
-                        <Route path="cart" element={<Cart/>}/>
-                        <Route path="*" element={<Error/>}/>
-                    </Route>
-                </Routes>
-            </BrowserRouter>   
+            <article id="introText">
+                Lorem, ipsum dolor sit amet consectetur adipisicing 
+                elit. Aut molestiae mollitia blanditiis minus 
+                similique nobis, odio aperiam labore facere 
+                reprehenderit!
+            </article>
+            <img id="displayPro" name="displayPro"/>
+            <div>
+                <h3 className="pro_name">Shoes</h3>
+                <div className="brand_div">
+                    {shoeItem.map((details)=> {
+                        const {id, image, brand, desc, price} = details;
+                        if(id < 5) {
+                            return <Template key={id} {...details}></Template>
+                        };
+                    })}
+                </div>
+                <h3 className="pro_name">Cloths</h3>
+                <div className="brand_div">
+                    {clothItem.map((details)=> {
+                        const {id, image, brand, desc, price} = details;
+                        if(id < 5) {
+                            return <Template key={id} {...details}></Template>
+                        };
+                    })}
+                </div>
+                <h3 className="pro_name">Food</h3>
+                <div className="brand_div">
+                    {foodItem.map((details)=> {
+                        const {id, image, brand, desc, price} = details;
+                        if(id < 5) {
+                            return <Template key={id} {...details}></Template>
+                        };
+                    })}
+                </div>
+            </div>
+            <footer><Footer/></footer>   
         </>
+        
     );
 };
 
