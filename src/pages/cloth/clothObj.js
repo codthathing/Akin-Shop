@@ -1,8 +1,16 @@
-import flower from '../shoe/shoe_img/flower.jpg';
+import checkMen from "./cloth_img/checkMen.jpeg";
+import checkWomen from "./cloth_img/checkWomen.jpeg";
+import jeanMen from "./cloth_img/jeanMen.jpeg";
+import jeanWomen from "./cloth_img/jeanWomen.jpeg";
+import nickers from "./cloth_img/nickers.jpeg";
+import pants from "./cloth_img/pants.jpeg";
+import poloG from "./cloth_img/poloG.jpeg";
+import poloP from "./cloth_img/poloP.jpeg";
+
 export const clothItem = [
     {
         id: 1,
-        image: flower,
+        image: checkMen,
         brand: 'Check shirt',
         desc: 'A fitted for both genders',
         price: 2000.00,
@@ -10,7 +18,7 @@ export const clothItem = [
     },
     {
         id: 2,
-        image: flower,
+        image: poloG,
         brand: 'Jean shorts',
         desc: 'A fitted for both genders',
         price: 3000.00,
@@ -18,7 +26,7 @@ export const clothItem = [
     },
     {
         id: 3,
-        image: flower,
+        image: jeanMen,
         brand: 'Hoodie',
         desc: 'A fitted for both genders',
         price: 1000.00,
@@ -26,7 +34,7 @@ export const clothItem = [
     },
     {
         id: 4,
-        image: flower,
+        image: pants,
         brand: 'Canvas',
         desc: 'A fitted for both genders',
         price: 5000.00,
@@ -34,7 +42,7 @@ export const clothItem = [
     },
     {
         id: 5,
-        image: flower,
+        image: checkWomen,
         brand: 'Canvas',
         desc: 'A fitted for both genders',
         price: 5000.00,
@@ -42,10 +50,26 @@ export const clothItem = [
     },
     {
         id: 6,
-        image: flower,
+        image: nickers,
         brand: 'Canvas',
         desc: 'A fitted for both genders',
         price: 5000.00,
+        item: 1
+    },
+    {
+        id: 7,
+        image: jeanWomen,
+        brand: 'Canvas',
+        desc: 'A fitted for both genders',
+        price: 7000.00,
+        item: 1
+    },
+    {
+        id: 8,
+        image: poloP,
+        brand: 'Canvas',
+        desc: 'A fitted for both genders',
+        price: 5500.00,
         item: 1
     }
 ];

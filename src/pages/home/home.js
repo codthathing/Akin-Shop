@@ -1,27 +1,34 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Template from "../template";
 import { shoeItem } from "../shoe/shoeObj";
 import { foodItem } from "../food/foodObj";
 import { clothItem } from "../cloth/clothObj";
 import Footer from "./footer";
-import laptop from "../images/laptop_main.jpg";
-import liveseg from "../images/livesegball.png";
-import shopify from "../images/shopify.png";
+import ashion from "../images/ashion.jpeg";
+import casuals from "../images/casuals.jpeg";
+import checkMen from "../images/checkMen.jpeg";
+import pants from "../images/pants.jpeg";
+import semo from "../images/semo.jpeg";
+import spag from "../images/spag.jpeg"
 
-let i = 0;
-const images = [laptop, liveseg, shopify];
-function imgChange() {
-    document.getElementById('displayPro').src = images[i];
-    if(i < images.length - 1) {
-        i++;
-    } else {
-        i = 0;
-    };
-    setTimeout("imgChange()", 500);
-};
-window.onload = imgChange
 
 const Home = () => {
+
+    let i = 0;
+    const images = [ashion, casuals, checkMen, pants, semo, spag];
+    function imgChange() {
+        document.getElementById('displayPro').src = images[i];
+        if(i < images.length - 1) {
+            i++;
+        } else {
+            i = 0;
+        };
+    };
+    useEffect(()=> {
+        setInterval(()=> {
+            imgChange()
+        }, 2500)
+    })
 
     return (
         <>
@@ -31,7 +38,9 @@ const Home = () => {
                 similique nobis, odio aperiam labore facere 
                 reprehenderit!
             </article>
-            <img id="displayPro" name="displayPro"/>
+            <div style={{display: 'flex', justifyContent:'center'}}>
+                <img id="displayPro" src={spag} name="displayPro"/>
+            </div>
             <div>
                 <h3 className="pro_name">Shoes</h3>
                 <div className="brand_div">

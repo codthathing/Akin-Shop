@@ -22,10 +22,12 @@ const Cart = () => {
                 const {id, image, brand, desc, price, item} = details          
                 return <CartItems key={id} {...details}></CartItems>
             })}
-            <button id="conOrderBtn">
-                <p>Confirm Order</p> 
-                <p style={{fontStyle:'italic'}}>Total = &#8358;{sum}</p>
-            </button>
+            <div style={{display: 'flex', justifyContent:'center'}}>
+                <button id="conOrderBtn">
+                    <p>Confirm Order</p> 
+                    <p style={{fontStyle:'italic'}}>Total = &#8358;{sum}</p>
+                </button>
+            </div>
         </ItemOrderContext.Provider>
     );
     
