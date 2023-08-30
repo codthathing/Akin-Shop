@@ -13,26 +13,26 @@ const Main = () => {
 
   const Error = () => {
     return (
-        <h1>This page is not available</h1>
+      <h1>This page is not available</h1>
     ); 
   };
   
   return (
-      <>
-          <Layout/>
-          <BrowserRouter>
-              <Routes>
-                  <Route path="/">
-                      <Route index element={<Home/>}/>
-                      <Route path="food" element={<Food/>}/>
-                      <Route path="shoe" element={<Shoe/>}/>
-                      <Route path="cloth" element={<Cloth/>}/>
-                      <Route path="cart" element={<Cart/>}/>
-                      <Route path="*" element={<Error/>}/>
-                  </Route>
-              </Routes>
-          </BrowserRouter>   
-      </>
+    <>
+      <Layout/>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/">
+            <Route index element={<Home/>}/>
+            <Route path="food" element={<Food/>}/>
+            <Route path="shoe" element={<Shoe/>}/>
+            <Route path="cloth" element={<Cloth/>}/>
+            <Route path="cart" element={<Cart/>}/>
+            <Route path="*" element={<Error/>}/>
+          </Route>
+        </Routes>
+      </BrowserRouter>   
+    </>
   );
 }
 

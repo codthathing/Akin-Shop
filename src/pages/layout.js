@@ -15,7 +15,7 @@ export default function Layout() {
             </nav>
         </header>
         <Outlet/>
-    </>
+    </> 
     
 }
 
