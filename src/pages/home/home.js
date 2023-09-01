@@ -17,7 +17,9 @@ const Home = () => {
   let i = 0;
   const images = [ashion, casuals, checkMen, pants, semo, spag];
   function imgChange() {
-    document.getElementById('displayPro').src = images[i];
+    if(window.location.pathname === "/") {
+      document.getElementById('displayPro').src = images[i];
+    }
     if(i < images.length - 1) {
       i++;
     } else {
@@ -26,7 +28,7 @@ const Home = () => {
   };
   useEffect(()=> {
     setInterval(()=> {
-      imgChange()
+      imgChange();      
     }, 2500)
   })
 

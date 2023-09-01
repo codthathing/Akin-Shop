@@ -19,16 +19,15 @@ const Main = () => {
   
   return (
     <>
-      <Layout/>
       <BrowserRouter>
         <Routes>
-          <Route path="/">
-            <Route index element={<Home/>}/>
-            <Route path="food" element={<Food/>}/>
-            <Route path="shoe" element={<Shoe/>}/>
-            <Route path="cloth" element={<Cloth/>}/>
-            <Route path="cart" element={<Cart/>}/>
-            <Route path="*" element={<Error/>}/>
+          <Route exact path="/" element={<Layout/>}>
+            <Route index element={<Home/>}></Route>
+            <Route path="/food" element={<Food/>}></Route>
+            <Route path="/shoe" element={<Shoe/>}></Route>
+            <Route path="/cloth" element={<Cloth/>}></Route>
+            <Route path="/cart" element={<Cart/>}></Route>
+            <Route path="*" element={<Error/>}></Route>
           </Route>
         </Routes>
       </BrowserRouter>   

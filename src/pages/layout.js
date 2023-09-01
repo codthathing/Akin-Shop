@@ -1,33 +1,35 @@
-import { Outlet } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 
-export default function Layout() {
-    return <>
-        <header id="header">
-            <h1>Akinia</h1>
-            <nav>
-                <ul id="nav">
-                    <ActiveLink href="/">Home</ActiveLink>
-                    <ActiveLink href="/cloth">Cloth</ActiveLink>
-                    <ActiveLink href="/food">Food</ActiveLink>
-                    <ActiveLink href="/shoe">Shoe</ActiveLink>
-                    <ActiveLink href="/cart">Cart</ActiveLink>
-                </ul> 
-            </nav>
-        </header>
-        <Outlet/>
-    </> 
-    
-}
 
-function ActiveLink({ href, children, ...props }) {
+const ActiveLink = ({ to, children, ...props }) => {
     const path = window.location.pathname;
-
     return (
         <li>
-            <a href={href} {...props} 
-              className={path === href ? "active" : ""}>
+            <Link to={to} {...props}
+              className={path === to ? "active" : "link"}>
                 {children}
-            </a>
+            </Link>
         </li>
     );
 };
+
+
+export default function Layout() {
+    return (
+       <>
+            <header id="header">
+                <h1>Akinia</h1>
+                <nav>
+                    <ul id="nav">
+                        <ActiveLink to="/">Home</ActiveLink>
+                        <ActiveLink to="/cloth">Cloth</ActiveLink>
+                        <ActiveLink to="/food">Food</ActiveLink>
+                        <ActiveLink to="/shoe">Shoe</ActiveLink>
+                        <ActiveLink to="/cart">Cart</ActiveLink>
+                    </ul>
+                </nav>
+            </header>
+            <Outlet/>
+        </> 
+    );
+}
