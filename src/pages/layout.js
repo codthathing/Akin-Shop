@@ -1,14 +1,14 @@
 import { Link, Outlet } from "react-router-dom";
 
 
-const ActiveLink = ({ to, children, ...props }) => {
+const ActiveLink = ({ href, children, ...props }) => {
     const path = window.location.pathname;
     return (
         <li>
-            <Link to={to} {...props}
-              className={path === to ? "active" : "link"}>
+            <a href={href} {...props} className="link" 
+              id={path === href ? "active" : ""}>
                 {children}
-            </Link>
+            </a>
         </li>
     );
 };
@@ -21,11 +21,11 @@ export default function Layout() {
                 <h1>Akinia</h1>
                 <nav>
                     <ul id="nav">
-                        <ActiveLink to="/">Home</ActiveLink>
-                        <ActiveLink to="/cloth">Cloth</ActiveLink>
-                        <ActiveLink to="/food">Food</ActiveLink>
-                        <ActiveLink to="/shoe">Shoe</ActiveLink>
-                        <ActiveLink to="/cart">Cart</ActiveLink>
+                        <ActiveLink href="/">Home</ActiveLink>
+                        <ActiveLink href="/cloth">Cloth</ActiveLink>
+                        <ActiveLink href="/food">Food</ActiveLink>
+                        <ActiveLink href="/shoe">Shoe</ActiveLink>
+                        <ActiveLink href="/cart">Cart</ActiveLink>
                     </ul>
                 </nav>
             </header>
