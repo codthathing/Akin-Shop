@@ -1,35 +1,26 @@
 import { Link, Outlet } from "react-router-dom";
-
-
-const ActiveLink = ({ href, children, ...props }) => {
-    const path = window.location.pathname;
-    return (
-        <li>
-            <a href={href} {...props} className="link" 
-              id={path === href ? "active" : ""}>
-                {children}
-            </a>
-        </li>
-    );
-};
-
+import { useLocation } from "react-router-dom";
 
 export default function Layout() {
+    const location = useLocation().pathname;
+
+    const routePaths = [
+        { id: 0, text: "home", path: "/" },
+        { id: 1, text: "cloth", path: "/cloth" },
+        { id: 2, text: "food", path: "/food" },
+        { id: 3, text: "shoe", path: "/shoe" },
+        { id: 4, text: "cart", path: "/cart" }
+    ];
+
     return (
-       <>
+        <>
             <header id="header">
                 <h1>Akinia</h1>
-                <nav>
-                    <ul id="nav">
-                        <ActiveLink href="/">Home</ActiveLink>
-                        <ActiveLink href="/cloth">Cloth</ActiveLink>
-                        <ActiveLink href="/food">Food</ActiveLink>
-                        <ActiveLink href="/shoe">Shoe</ActiveLink>
-                        <ActiveLink href="/cart">Cart</ActiveLink>
-                    </ul>
+                <nav id="nav">
+                    {routePaths.map(({ id, text, path }) => <Link key={id} className="link" id={location === path ? "active" : ""} to={path}>{text}</Link>)}
                 </nav>
             </header>
-            <Outlet/>
-        </> 
+            <Outlet />
+        </>
     );
 }

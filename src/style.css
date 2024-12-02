@@ -1,8 +1,8 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 body {
@@ -17,12 +17,11 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid black;
 }
 
 #header h1 {
     color: red;
-    font-family:'Times New Roman', Times, serif;
+    font-family: 'Times New Roman', Times, serif;
     font-weight: bold;
 }
 
@@ -32,19 +31,19 @@ body {
     align-items: center;
 }
 
-#nav li {
-    list-style: none;
-    cursor: pointer;
-}
-
-#nav li .link {
+.link {
     text-decoration: none;
     color: black;
     transition: all 500ms linear;
 }
 
-#nav li #active {
+#active {
     background-color: red;
+}
+
+#introText {
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
 }
 
 #displayPro {
@@ -76,7 +75,7 @@ body {
 }
 
 .brand_price {
-    font-family:'Times New Roman', Times, serif;
+    font-family: 'Times New Roman', Times, serif;
     font-weight: 400;
 }
 
@@ -199,40 +198,38 @@ body {
 
     #header {
         padding: 0.75rem 0.5rem;
-        margin-bottom: 1rem;
     }
 
     #header h1 {
         font-size: 1.25rem;
     }
 
-    #nav li {
+    #nav {
+        gap: 0 0.75rem;
+    }
+
+    .link {
         font-size: 0.75rem;
-        margin: 0 0.25rem;
         border-radius: 0.25rem;
     }
 
-    #nav li .link {
+    #active {
         padding: 0.125rem 0.25rem;
+        letter-spacing: 0.5px;
     }
 
-    #nav li #active {
-        letter-spacing: 1px;
-    }
-
-    #nav li .link:hover {
-        letter-spacing: 1px;
+    .link:hover {
+        letter-spacing: 0.5px;
     }
 
     #introText {
-        padding: 0  0.5rem 1rem 0.5rem;
-        border-bottom: 1px solid black;
+        padding: 1rem 0.5rem;
         margin-bottom: 1rem;
         font-size: 0.75rem;
     }
 
-    #displayPro {    
-        height: 5rem;
+    #displayPro {
+        height: 25rem;
         margin: 0 0.5rem 0.5rem 0.5rem;
     }
 
@@ -327,7 +324,7 @@ body {
     .itemName {
         font-size: 0.75rem;
     }
-    
+
     .itemPrice {
         font-size: 0.75rem;
     }
@@ -348,17 +345,17 @@ body {
     .itemBtn {
         font-size: 1rem;
     }
-    
+
     .itemTotal {
         font-size: 0.75rem;
     }
-    
+
     .remItemBtn {
         padding: 0.125rem 0.25rem 0.125rem 0.25rem;
         font-size: 0.75rem;
         margin-top: 0.5rem;
     }
-    
+
     #conOrderBtn {
         font-size: 1rem;
         padding: 0.5rem;
@@ -376,40 +373,38 @@ body {
 
     #header {
         padding: 1.5rem 1rem;
-        margin-bottom: 1.5rem;
     }
 
     #header h1 {
         font-size: 2rem;
     }
 
-    #nav li {
+    #nav {
+        gap: 0 2rem;
+    }
+
+    .link {
         font-size: 1.5rem;
-        margin: 0 0.5rem;
         border-radius: 0.5rem;
     }
 
-    #nav li .link {
+    #active {
         padding: 0.125rem 0.5rem;
+        letter-spacing: 1.5px;
     }
 
-    #nav li #active {
-        letter-spacing: 2.5px;
-    }
-
-    #nav li .link:hover {
-        letter-spacing: 2.5px;
+    .link:hover {
+        letter-spacing: 1.5px;
     }
 
     #introText {
-        padding: 0  1rem 1.5rem 1rem;
-        border-bottom: 1px solid black;
         margin-bottom: 1.5rem;
+        padding: 1.5rem 1rem;
         font-size: 1.5rem;
     }
 
-    #displayPro {    
-        height: 10rem;
+    #displayPro {
+        height: 45rem;
         margin: 0 1rem 1rem 1rem;
     }
 
@@ -503,7 +498,7 @@ body {
     .itemName {
         font-size: 1.5rem;
     }
-    
+
     .itemPrice {
         font-size: 1.5rem;
     }
@@ -524,17 +519,17 @@ body {
     .itemBtn {
         font-size: 2rem;
     }
-    
+
     .itemTotal {
         font-size: 1.5rem;
     }
-    
+
     .remItemBtn {
         padding: 0.25rem 0.75rem;
         font-size: 1.5rem;
         margin-top: 1rem;
     }
-    
+
     #conOrderBtn {
         font-size: 2rem;
         padding: 0.5rem;
@@ -551,40 +546,38 @@ body {
 @media all and (min-width: 1024px) {
     #header {
         padding: 1rem;
-        margin-bottom: 1rem;
     }
 
     #header h1 {
         font-size: 1.25rem;
     }
 
-    #nav li {
+    #nav {
+        gap: 0 1.5rem;
+    }
+
+    .link {
         font-size: 1rem;
-        margin: 0 0.5rem;
         border-radius: 0.25rem;
     }
 
-    #nav li .link {
+    #active {
         padding: 0.125rem 0.5rem;
+        letter-spacing: 1px;
     }
 
-    #nav li #active {
-        letter-spacing: 1.5px;
-    }
-
-    #nav li .link:hover {
-        letter-spacing: 1.5px;
+    .link:hover {
+        letter-spacing: 1px;
     }
 
     #introText {
-        padding: 0 1rem 1rem 1rem;
-        border-bottom: 1px solid black;
         margin-bottom: 1rem;
+        padding: 1rem;
         font-size: 1rem;
     }
 
-    #displayPro {    
-        height: 7.5rem;
+    #displayPro {
+        height: 35rem;
         margin: 0 1rem 1rem 1rem;
     }
 
@@ -678,7 +671,7 @@ body {
     .itemName {
         font-size: 1rem;
     }
-    
+
     .itemPrice {
         font-size: 1rem;
     }
@@ -699,17 +692,17 @@ body {
     .itemParamBtn var {
         font-size: 1rem;
     }
-    
+
     .itemTotal {
         font-size: 1rem;
     }
-    
+
     .remItemBtn {
         padding: 0.25rem 0.75rem;
         font-size: 1rem;
         margin-top: 0.75rem;
     }
-    
+
     #conOrderBtn {
         font-size: 1.35rem;
         padding: 0.5rem;
