@@ -1,15 +1,9 @@
-import React from "react";
-import Template from '../template'
-import { foodItem } from './foodObj'
+import React, { useContext } from "react";
+import { NavigateContext } from "../../services/providers/ContextProvider";
+import Template from "../template";
 
 const Food = () => {
-    return (
-        <div className="brand_div">
-            {foodItem.map((details)=> {
-                const {id, image, brand, desc, price} = details;
-                return <Template key={id} {...details}></Template>
-            })}
-        </div>
-    );
+    const { foodItems, setFoodItems } = useContext(NavigateContext);
+    return <Template itemsArray={foodItems} setItemsArray={setFoodItems} />
 };
 export default Food;

@@ -1,8 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
+import { NavigateContext } from "../../services/providers/ContextProvider";
 import Template from "../template";
-import { shoeItem } from "../shoe/shoeObj";
-import { foodItem } from "../food/foodObj";
-import { clothItem } from "../cloth/clothObj";
 import Footer from "./footer";
 import ashion from "../images/ashion.jpeg";
 import casuals from "../images/casuals.jpeg";
@@ -12,8 +10,9 @@ import semo from "../images/semo.jpeg";
 import spag from "../images/spag.jpeg"
 
 const Home = () => {
-  const [displayImage, setDisplayImage] = useState(ashion);
+  const { shoeItems, setShoeItems, foodItems, setFoodItems, clothItems, setClothItems } = useContext(NavigateContext);
 
+  const [displayImage, setDisplayImage] = useState(ashion);
   const images = [ashion, casuals, checkMen, pants, semo, spag];
   useEffect(() => {
     let i = 0;
@@ -36,32 +35,11 @@ const Home = () => {
       </div>
       <div>
         <h3 className="pro_name">Shoes</h3>
-        <div className="brand_div">
-          {shoeItem.map((details) => {
-            const { id, image, brand, desc, price } = details;
-            if (id < 5) {
-              return <Template key={id} {...details}></Template>
-            };
-          })}
-        </div>
+        <Template itemsArray={shoeItems.slice(0, 4)} setItemsArray={setShoeItems} />
         <h3 className="pro_name">Cloths</h3>
-        <div className="brand_div">
-          {clothItem.map((details) => {
-            const { id, image, brand, desc, price } = details;
-            if (id < 5) {
-              return <Template key={id} {...details}></Template>
-            };
-          })}
-        </div>
+        <Template itemsArray={clothItems.slice(0, 4)} setItemsArray={setClothItems} />
         <h3 className="pro_name">Food</h3>
-        <div className="brand_div">
-          {foodItem.map((details) => {
-            const { id, image, brand, desc, price } = details;
-            if (id < 5) {
-              return <Template key={id} {...details}></Template>
-            };
-          })}
-        </div>
+        <Template itemsArray={foodItems.slice(0, 4)} setItemsArray={setFoodItems} />
       </div>
       <footer><Footer /></footer>
     </>

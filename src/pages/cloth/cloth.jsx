@@ -1,16 +1,10 @@
-import React from "react";
-import Template from '../template'
-import { clothItem } from "./clothObj";
+import React, { useContext } from "react";
+import { NavigateContext } from "../../services/providers/ContextProvider";
+import Template from "../template";
 
 const Cloth = () => {
-    return (
-        <div className="brand_div">
-            {clothItem.map((details)=> {
-                const {id, image, brand, desc, price} = details;
-                return <Template key={id} {...details}></Template>
-            })}
-        </div>
-    );
+    const { clothItems, setClothItems } = useContext(NavigateContext);
+    return <Template itemsArray={clothItems} setItemsArray={setClothItems} />
 };
 
 export default Cloth;

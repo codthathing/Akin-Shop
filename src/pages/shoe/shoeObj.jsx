@@ -13,15 +13,15 @@ export const shoeItem = [
     brand: 'Balenciaga',
     desc: 'A very affordable shoe',
     price: 25000.00,
-    purchase: 1
+    item: 1
   },
   { 
     id: 2,
     image: canvas,
     brand: 'Boot',
     desc: 'A very affordable shoe',
-    price: 13000.00,
-    purchase: 1
+    price: 13000.00,    
+    item: 1
   },
   {
     id: 3,
