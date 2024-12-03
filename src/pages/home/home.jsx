@@ -11,20 +11,17 @@ import pants from "../images/pants.jpeg";
 import semo from "../images/semo.jpeg";
 import spag from "../images/spag.jpeg"
 
-
 const Home = () => {
-
   const [displayImage, setDisplayImage] = useState(ashion);
 
   const images = [ashion, casuals, checkMen, pants, semo, spag];
-  useEffect(() => {
+  window.addEventListener("load", () => {
     let i = 0;
-    const timeout = setInterval(() => {
+    setInterval(() => {
       setDisplayImage(images[i]);
       { (i < images.length - 1) ? i++ : i = 0 };
     }, 2500);
-    return () => clearInterval(timeout);
-  }, []);
+  });
 
 
   return (
