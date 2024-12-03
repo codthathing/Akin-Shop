@@ -46,9 +46,8 @@ body {
     border-bottom: 1px solid black;
 }
 
-#displayPro {
+#display-image {
     width: 100%;
-    object-position: center;
 }
 
 .pro_name {
@@ -224,13 +223,15 @@ body {
 
     #introText {
         padding: 1rem 0.5rem;
-        margin-bottom: 1rem;
         font-size: 0.75rem;
     }
 
-    #displayPro {
+    #display-image-div {
+        padding: 1rem 0.5rem;
+    }
+
+    #display-image {
         height: 25rem;
-        margin: 0 0.5rem 0.5rem 0.5rem;
     }
 
     .pro_name {
@@ -398,14 +399,16 @@ body {
     }
 
     #introText {
-        margin-bottom: 1.5rem;
         padding: 1.5rem 1rem;
         font-size: 1.5rem;
     }
 
-    #displayPro {
+    #display-image-div {
+        padding: 1.5rem 1rem;
+    }
+
+    #display-image {
         height: 45rem;
-        margin: 0 1rem 1rem 1rem;
     }
 
     .pro_name {
@@ -571,14 +574,16 @@ body {
     }
 
     #introText {
-        margin-bottom: 1rem;
         padding: 1rem;
         font-size: 1rem;
     }
 
-    #displayPro {
+    #display-image-div {
+        padding: 1rem;
+    }
+
+    #display-image {
         height: 35rem;
-        margin: 0 1rem 1rem 1rem;
     }
 
     .pro_name {

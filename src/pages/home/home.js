@@ -16,16 +16,14 @@ const Home = () => {
 
   const [displayImage, setDisplayImage] = useState(ashion);
 
-
   const images = [ashion, casuals, checkMen, pants, semo, spag];
-  useEffect(() => {
+  window.addEventListener("load", () => {
     let i = 0;
-    const timeout = setInterval(() => {
+    setInterval(() => {
       setDisplayImage(images[i]);
       {(i < images.length - 1) ? i++ : i = 0};
     }, 2500);
-    return () => clearInterval(timeout);
-  }, []);
+  });
 
 
   return (
@@ -33,8 +31,8 @@ const Home = () => {
       <article id="introText">
         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut molestiae mollitia blanditiis minus similique nobis, odio aperiam labore facere reprehenderit!
       </article>
-      <div style={{ display: 'flex', justifyContent: 'center' }}>
-        <img id="displayPro" src={displayImage} name="displayPro" />
+      <div id="display-image-div">
+        <img src={displayImage} id="display-image" name="displayPro" />
       </div>
       <div>
         <h3 className="pro_name">Shoes</h3>
