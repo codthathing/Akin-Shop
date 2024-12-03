@@ -17,14 +17,14 @@ const Home = () => {
   const [displayImage, setDisplayImage] = useState(ashion);
 
   const images = [ashion, casuals, checkMen, pants, semo, spag];
-  useEffect(() => {
-    let i = 0;
-    const timeout = setInterval(() => {
-      setDisplayImage(images[i]);
-      { (i < images.length - 1) ? i++ : i = 0 };
-    }, 2500);
-    return () => clearInterval(timeout);
-  }, []);
+  // useEffect(() => {
+  //   let i = 0;
+  //   const timeout = setInterval(() => {
+  //     setDisplayImage(images[i]);
+  //     { (i < images.length - 1) ? i++ : i = 0 };
+  //   }, 2500);
+  //   return () => clearInterval(timeout);
+  // }, []);
 
 
   return (
