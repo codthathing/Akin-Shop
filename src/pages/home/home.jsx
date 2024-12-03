@@ -15,10 +15,7 @@ const Home = () => {
   const [displayImage, setDisplayImage] = useState(ashion);
 
   const images = [ashion, casuals, checkMen, pants, semo, spag];
-  // useEffect(() => {
-
-
-  window.addEventListener("load", () => {
+  useEffect(() => {
     let i = 0;
     const interval = setInterval(() => {
       setDisplayImage(images[i]);
@@ -26,11 +23,7 @@ const Home = () => {
     }, 2500);
 
     return () => clearInterval(interval);
-  });
-
-  //   window.addEventListener("load", handleLoad);
-  //   return () => window.removeEventListener("load", handleLoad);
-  // }, []);
+  }, []);
 
 
   return (
