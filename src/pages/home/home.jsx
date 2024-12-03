@@ -15,13 +15,22 @@ const Home = () => {
   const [displayImage, setDisplayImage] = useState(ashion);
 
   const images = [ashion, casuals, checkMen, pants, semo, spag];
-  useEffect(() => {
+  // useEffect(() => {
+
+
+  window.addEventListener("load", () => {
     let i = 0;
-    setInterval(() => {
+    const interval = setInterval(() => {
       setDisplayImage(images[i]);
-      { (i < images.length - 1) ? i++ : i = 0 };
+      i = (i < images.length - 1) ? i + 1 : 0;
     }, 2500);
-  }, []);
+
+    return () => clearInterval(interval);
+  });
+
+  //   window.addEventListener("load", handleLoad);
+  //   return () => window.removeEventListener("load", handleLoad);
+  // }, []);
 
 
   return (
