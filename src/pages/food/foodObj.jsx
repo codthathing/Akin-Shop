@@ -38,37 +38,5 @@ export const foodItem = [
 		desc: 'A delicious meal and nice',
 		price: 5000.00,
 		item: 1
-	},
-	{
-		id: 5,
-		image: food,
-		brand: 'Beans & Rice',
-		desc: 'A delicious meal and nice',
-		price: 5000.00,
-		item: 1
-	},
-	{
-		id: 6,
-		image: goryin,
-		brand: 'Beans & Rice',
-		desc: 'A delicious meal and nice',
-		price: 2000.00,
-		item: 1
-	},
-	{
-	  id: 7,
-	  image: spag,
-	  brand: 'Beans & Rice',
-	  desc: 'A delicious meal and nice',
-	  price: 3000.00,
-	  item: 1
-	},
-	{
-		id: 8,
-		image: semo,
-		brand: 'Beans & Rice',
-		desc: 'A delicious meal and nice',
-		price: 6800.00,
-		item: 1
 	}
 ];

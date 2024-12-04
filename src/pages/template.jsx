@@ -5,12 +5,17 @@ const Template = ({ itemsArray, setItemsArray }) => {
     const { cartItems, setCartItems } = useContext(NavigateContext);
 
     const itemFunction = (id, type) => {
-        setItemsArray(prevState => prevState.map((item) => (item.id === id) ? { ...item, ...(type === "ADD" ? { item: item.item + 1 } : { item: item.item > 1 ? item.item - 1 : 1 }) } : item));
+        setItemsArray((prevState) => prevState.map((item) => item.id === id ? { ...item, ...(type === "ADD" ? { item: item.item + 1 } : { item: item.item > 1 ? item.item - 1 : 1 }), } : item));
     };
 
     const addToCart = (id) => {
         const newCartItem = itemsArray.find((item) => item.id === id);
-        setCartItems([...cartItems, newCartItem]);
+        if (cartItems.some(({ brand }) => brand === newCartItem.brand)) {
+            setCartItems((prevState) => prevState.map((item) => item.brand === newCartItem.brand ? { ...item, item: item.item + newCartItem.item } : item));
+        } else {
+            setCartItems([...cartItems, newCartItem]);
+        };
+        setItemsArray(prevState => prevState.map((item) => item.id === id ? { ...item, item: 1 } : item));
     };
 
     return (
@@ -24,11 +29,23 @@ const Template = ({ itemsArray, setItemsArray }) => {
                         <var className="brand_price">${price}</var>
                         <div className="pur_div">
                             <div className="pur_det">
-                                <button onClick={() => itemFunction(id, "MINUS")} className="pur_btn">-</button>
+                                <button
+                                    onClick={() => itemFunction(id, "MINUS")}
+                                    className="pur_btn"
+                                >
+                                    -
+                                </button>
                                 <p className="pur_num">{item}</p>
-                                <button onClick={() => itemFunction(id, "ADD")} className="pur_btn">+</button>
+                                <button
+                                    onClick={() => itemFunction(id, "ADD")}
+                                    className="pur_btn"
+                                >
+                                    +
+                                </button>
                             </div>
-                            <button onClick={() => addToCart(id)} className="cart_btn">Add</button>
+                            <button onClick={() => addToCart(id)} className="cart_btn">
+                                Add
+                            </button>
                         </div>
                     </div>
                 );

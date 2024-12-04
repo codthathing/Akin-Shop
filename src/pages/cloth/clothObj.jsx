@@ -39,37 +39,5 @@ export const clothItem = [
     desc: 'A fitted for both genders',
     price: 5000.00,
     item: 1
-  },
-  {
-    id: 5,
-    image: checkWomen,
-    brand: 'Canvas',
-    desc: 'A fitted for both genders',
-    price: 5000.00,
-    item: 1
-  },
-  {
-    id: 6,
-    image: nickers,
-    brand: 'Canvas',
-    desc: 'A fitted for both genders',
-    price: 5000.00,
-    item: 1
-  },
-  {
-    id: 7,
-    image: jeanWomen,
-    brand: 'Canvas',
-    desc: 'A fitted for both genders',
-    price: 7000.00,
-    item: 1
-  },
-  {
-    id: 8,
-    image: poloP,
-    brand: 'Canvas',
-    desc: 'A fitted for both genders',
-    price: 5500.00,
-    item: 1
   }
 ];

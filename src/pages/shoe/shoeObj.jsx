@@ -38,37 +38,5 @@ export const shoeItem = [
     desc: 'A very affordable shoe',
     price: 35000.00,
     item: 1
-  },
-  {
-    id: 5,
-    image: sneakers,
-    brand: 'Prada',
-    desc: 'A very affordable shoe',
-    price: 25000.00,
-    item: 1
-  },
-  {
-    id: 6,
-    image: look,
-    brand: 'Prada',
-    desc: 'A very affordable shoe',
-    price: 15600.00,
-    item: 1
-  },
-  {
-    id: 7,
-    image: wildest,
-    brand: 'Prada',
-    desc: 'A very affordable shoe',
-    price: 10000.00,
-    item: 1
-  },
-  {
-    id: 8,
-    image: casuals,
-    brand: 'Prada',
-    desc: 'A very affordable shoe',
-    price: 15000.00,
-    item: 1
   }
 ];
