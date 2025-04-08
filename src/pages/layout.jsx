@@ -15,7 +15,7 @@ export default function Layout() {
     return (
         <>
             <header id="header">
-                <h1>Akinia</h1>
+                <h1>Akin Shop</h1>
                 <nav id="nav">
                     {routePaths.map(({ id, text, path }) => <Link key={id} className="link" id={location === path ? "active" : ""} to={path}>{text}</Link>)}
                 </nav>
